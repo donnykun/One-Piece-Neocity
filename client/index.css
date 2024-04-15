@@ -1,0 +1,442 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --roboto-font: 'roboto';
+    --poppins-font: 'poppins';
+    --sharetech-font: 'sharetech';
+    --transparent-redbg-color: rgba(247, 154, 154, 0.26);
+    --transparent-redbg2-color: rgba(247, 154, 154, 0.062);
+}
+
+html,
+body{
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 6px 0px 6px;
+}
+
+body{
+    background-image: url(/assets/skull-bg.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*main container*/
+main{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-height: 100vh;
+    border: 3px solid red;
+    border-radius: 2px;
+    position: relative;
+}
+
+/*header*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid red;
+    height: 18rem;
+    width: 100%;
+    background: var(--transparent-redbg-color);
+    background-image: url(/assets/luffy-header.png);
+    background-repeat: no-repeat;
+    background-size: 850px;
+    background-position: left;
+}
+
+.header-text{
+    font-family: var(--sharetech-font);
+    position: absolute;
+    font-size: 7.5rem;
+    right: 75px;
+    color: red;
+    text-shadow: 
+    -2px -2px 0 #fff, -1px -1px 5px red,
+    2px -2px 0 #fff, 1px -1px 5px red,
+    -2px  2px 0 #fff, -1px  1px 5px red,
+    2px  2px 0 #fff, 1px  1px 5px red;
+    animation: breathing-header 3.5s infinite ease-out;
+}
+
+@keyframes breathing-header {
+    0%{
+        text-shadow: 
+        -2px -2px 0 #fff, -0px -0px 5px red,
+        2px -2px 0 #fff, 0px -0px 5px red,
+        -2px  2px 0 #fff, -0px  0px 5px red,
+        2px  2px 0 #fff, 0px  0px 5px red;
+    }
+    50%{
+        text-shadow: 
+        -2px -2px 0 #fff, -1px -1px  24px rgba(255, 99, 99, 0.192),
+        2px -2px 0 #fff, 1px -1px 24px rgba(255, 99, 99, 0.192),
+        -2px  2px 0 #fff, -1px  1px 24px rgba(255, 99, 99, 0.192),
+        2px  2px 0 #fff, 1px  1px 24px rgba(255, 99, 99, 0.192);
+    }
+    100%{
+        text-shadow: 
+        -2px -2px 0 #fff, -0px -0px 5px red,
+        2px -2px 0 #fff, 0px -0px 5px red,
+        -2px  2px 0 #fff, -0px  0px 5px red,
+        2px  2px 0 #fff, 0px  0px 5px red;
+    }
+}
+
+.main-sections{
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sharetech-font);
+}
+
+/*left container*/
+.main-left{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 0;
+    gap: 10px;
+    width: 25%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.updates-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 14rem;
+    border: 3px solid red;
+    border-radius: 2px;
+}
+
+.updates-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--transparent-redbg-color);
+    border-bottom: 3px solid red;
+    height: 3.5rem;
+    position: relative;
+}
+
+.updates-header > h2{
+    color: white;
+    font-family: var(--sharetech-font);
+    font-weight: lighter;
+}
+
+.updates-bottom{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    background: var(--transparent-redbg2-color);
+    overflow: hidden;
+    overflow-y: visible;
+}
+
+.updates-card{
+    background: var(--transparent-redbg-color);
+    border-radius: 2px;
+    width: 100%;
+    height: fit-content;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: .3rem;
+}
+
+.updates-card > small{
+    font-size: 13px;
+}
+
+.updates-card > span{
+    line-height: 1.4;
+    font-size: .9rem;
+    font-family: var(--roboto-font);
+}
+
+.guide-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    border: 3px solid red;
+    border-radius: 2px;
+}
+
+.guide-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--transparent-redbg-color);
+    border-bottom: 3px solid red;
+    height: 3.5rem;
+    position: relative;
+}
+
+.guide-header > h2{
+    color: white;
+    font-family: var(--sharetech-font);
+    font-weight: lighter;
+}
+
+.guide-bottom{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    background: var(--transparent-redbg2-color);
+}
+
+.guide-links{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.guide-links > a {
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: var(--sharetech-font);
+}
+
+.guide-links > a > span{
+    transition: .5s;
+}
+
+.guide-links > a > span:hover{
+    transform: scale(1.05);
+    letter-spacing: 1.2px;
+}
+
+.log-pose-img{
+    width: 2rem;
+    animation: moving-list-icon 2.3s infinite steps(1);
+}
+
+/*middle container*/
+.main-middle{
+    width: 50%;
+    height: 100%;
+    border: 3px solid red;
+    border-radius: 2px;
+    padding-top: 0;
+}
+
+/*right container*/
+.main-right{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    border-radius: 2px;
+    padding-top: 0;
+}
+
+.music-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20rem;
+    border: 3px solid red;
+    border-radius: 2px;
+}
+
+.music-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--transparent-redbg-color);
+    border-bottom: 3px solid red;
+    height: 3.5rem;
+    position: relative;
+}
+
+.music-header > h2{
+    color: white;
+    font-family: var(--sharetech-font);
+    font-weight: lighter;
+}
+
+.gif-container{
+    display: inline-block;
+    cursor: pointer;
+}
+
+#brook-gif{
+    width: 5rem;
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.music-bottom{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    background: var(--transparent-redbg2-color);
+}
+
+.song-list{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.strawhats-logo, .log-pose-guide{
+    width: 1.9rem;
+    animation: moving-list-icon 2.3s infinite steps(1);
+}
+
+@keyframes moving-list-icon{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(3px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+#song-btn{
+    font-size: .85rem;
+    background: none;
+    outline: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#song-btn.active{
+    color: cornflowerblue;
+}
+
+#song-btn:hover{
+    color: rgb(182, 28, 28);
+}
+
+audio{
+    width: 13rem;
+    height: 1.2rem;
+}
+
+audio::-webkit-media-controls-panel{
+    background: var(--transparent-redbg-color);
+}
+
+audio::-webkit-media-controls-current-time-display{
+    display: none;
+}
+
+audio::-webkit-media-controls-time-remaining-display{
+    display: none;
+}
+
+
+
+
+/*fonts*/
+
+@font-face{
+    font-family: 'poppins';
+    src: url(/assets/Poppins-Regular.otf);
+}
+
+@font-face{
+    font-family: 'sharetech';
+    src: url(/assets/ShareTech-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'roboto';
+    src: url(/assets/Roboto-Regular.ttf);
+}
+
+/*scrollbar*/
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(31, 31, 31);
+}
+
+::-webkit-scrollbar-thumb{
+    background: red;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(255, 0, 0, 0.384);
+}
+
+/* div scrollbars */
+.updates-bottom::-webkit-scrollbar {
+    width: 5px;
+}
+
+.updates-bottom::-webkit-scrollbar-thumb{
+    background-color: rgb(137, 27, 27);
+}
+
+.updates-bottom::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(137, 27, 27, 0.714);
+}
+
+.updates-bottom::-webkit-scrollbar-button{
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+}
+
+.updates-bottom::-webkit-scrollbar-track{
+    background-color: rgba(255, 255, 255, 0.179);
+}
