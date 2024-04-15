@@ -38,7 +38,6 @@ audio.addEventListener('loadeddata', () => {
     audioElement.play();
 }
 
-
 //current song color
 const buttons = document.querySelectorAll('#song-btn');
 
