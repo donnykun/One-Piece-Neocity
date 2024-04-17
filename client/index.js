@@ -24,7 +24,7 @@ songButtons.forEach((button, index) => {
 const audio = document.getElementById('audio');
 
 audio.addEventListener('loadeddata', () => {
-  audio.volume = 0.05; 
+  audio.volume = 0.02; 
 
   localStorage.setItem("Volume", audio.volume);
 });
