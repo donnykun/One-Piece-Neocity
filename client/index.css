@@ -28,6 +28,23 @@ body{
     align-items: center;
 }
 
+/* .tealColor{
+    color: teal;
+}
+
+.backgroundColor{
+    background-color: rgb(52, 37, 86);
+    background-image: none;
+}
+
+.blueText{
+    color: rgb(13, 0, 255);
+}
+
+.greenText{
+    color: rgb(0, 136, 7);
+} */
+
 /*main container*/
 main{
     display: flex;
@@ -39,13 +56,14 @@ main{
     position: relative;
 }
 
+
 /*header*/
 header{
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 3px solid red;
-    height: 18rem;
+    min-height: 18rem;
     width: 100%;
     background: var(--transparent-redbg-color);
     background-image: url(/assets/luffy-header.png);
@@ -53,6 +71,35 @@ header{
     background-size: 850px;
     background-position: left;
 }
+
+/* .light-switch{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: -75px;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: rgba(247, 154, 154, 0.26);
+} */
+
+/* #light-mode{
+    width: 1.4rem;
+    display: none;
+}
+
+#light-mode{
+    display: block;
+}
+
+#dark-mode{
+    width: 1.4rem;
+    display: none;
+}
+
+#dark-mode.active{
+    display: block;
+} */
 
 .header-text{
     font-family: var(--sharetech-font);
@@ -178,6 +225,10 @@ header{
     font-family: var(--roboto-font);
 }
 
+.morgans-img{
+    width: 23rem;
+}
+
 .guide-container{
     display: flex;
     flex-direction: column;
@@ -249,8 +300,39 @@ header{
     width: 2rem;
 }
 
-.morgans-img{
-    width: 23rem;
+.gifs-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 3px solid red;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.gif-track {
+    height: 100%;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    gap: 3px;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto;
+    animation: gifTrack 20s linear infinite;
+}
+
+@keyframes gifTrack {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-66%);
+    }
+}
+
+.gif-track > img{
+    width: 8rem;
+    object-fit: cover;
+    height: 4.3rem;
 }
 
 /*middle container*/
@@ -293,6 +375,7 @@ header{
     text-align: center;
     width: 45%;
     height: 100%;
+    position: relative;
 }
 
 .intro-left > h2{
@@ -300,6 +383,26 @@ header{
     font-weight: lighter;
     font-size: 2rem;
     white-space: nowrap;
+}
+
+.luffys-hat {
+    position: absolute;
+    width: 5rem;
+    top: 0;
+    right: 160px;
+    transform: rotate(-20deg);
+    cursor: pointer;
+    z-index: 5000;
+}
+
+@keyframes fly-away {
+    0% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(50deg) translateX(150rem) translateY(-10rem);
+        opacity: 0;
+    }
 }
 
 .intro-left > p{
@@ -830,7 +933,7 @@ header{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 20rem;
+    min-height: 20rem;
     border: 3px solid red;
     border-radius: 2px;
 }
@@ -851,7 +954,7 @@ header{
     font-weight: lighter;
 }
 
-.gif-container{
+.brook-gif-container{
     display: inline-block;
     cursor: pointer;
 }
@@ -888,6 +991,11 @@ header{
 
 .strawhats-logo, .log-pose-img{
     width: 1.9rem;
+    animation: moving-list-icon 2.3s infinite steps(1);
+}
+
+.dragonball-logo{
+    width: 1.5rem;
     animation: moving-list-icon 2.3s infinite steps(1);
 }
 
@@ -936,6 +1044,35 @@ audio::-webkit-media-controls-current-time-display{
 audio::-webkit-media-controls-time-remaining-display{
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1100px){
+    /*main container*/
+main{
+    width: 98%;
+}
+
+.header-text{
+    font-size: 6.5rem;
+}
+
+}
+
+
+
+
+
+
+
 
 
 

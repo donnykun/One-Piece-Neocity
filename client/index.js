@@ -8,7 +8,6 @@ const songPaths = [
   '/assets/op-22.mp3',
   '/assets/op-26.mp3',
   '/assets/ost-overtaken.mp3',
-  '/assets/ost-overtaken.mp3',
 ];
 
 const songButtons = document.querySelectorAll('#song-btn');
@@ -24,7 +23,7 @@ songButtons.forEach((button, index) => {
 const audio = document.getElementById('audio');
 
 audio.addEventListener('loadeddata', () => {
-  audio.volume = 0.02; 
+  audio.volume = 0.06; 
 
   localStorage.setItem("Volume", audio.volume);
 });
@@ -49,6 +48,30 @@ buttons.forEach(button => {
         button.classList.add('active');
     });
 });
+
+//luffy flying hat
+document.querySelector('.luffys-hat').addEventListener('click', function() {
+  this.style.animation = 'fly-away 20s forwards';
+
+  let audio = new Audio('/assets/luffy-eyecatcher.mp3');
+  audio.volume = 0.06;
+  audio.play();
+});
+
+// const changeColorBtn = document.querySelector('.light-switch');
+// const lightModeElements = document.querySelectorAll('p, li, a, button, b, #song-btn, h2, small, span');
+// const body = document.body;
+// const songBtn = document.querySelector('#song-btn');
+
+// changeColorBtn.addEventListener('click', () => {
+//     lightModeElements.forEach(element => {
+//         element.classList.toggle('blueText', false);
+//         element.classList.toggle('greenText', false);
+//         element.classList.toggle('tealColor');
+//     });
+//     body.classList.toggle('backgroundColor');
+// });
+
 
 
 
