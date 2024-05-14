@@ -49,12 +49,28 @@ buttons.forEach(button => {
     });
 });
 
+//chopper hiding
+document.querySelector('.chopper-hiding').addEventListener('click', function() {
+  let chopper = this;
+  chopper.classList.add('chopper-animate'); // Add class to trigger animation
+  let audio = new Audio('/assets/voice-chopper.mp3')
+  audio.volume = 0.5;
+  audio.play()
+
+  // Listen for animation end to remove the class and allow re-triggering
+  chopper.addEventListener('animationend', function() {
+      chopper.classList.remove('chopper-animate');
+  }, { once: true });
+});
+
+
+
 //luffy flying hat
 document.querySelector('.luffys-hat').addEventListener('click', function() {
   this.style.animation = 'fly-away 20s forwards';
 
   let audio = new Audio('/assets/luffy-eyecatcher.mp3');
-  audio.volume = 0.06;
+  audio.volume = 0.07;
   audio.play();
 });
 

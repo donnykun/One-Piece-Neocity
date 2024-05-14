@@ -14,8 +14,6 @@
 
 html,
 body{
-    min-height: 100vh;
-    width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     padding: 6px 0px 6px;
@@ -24,21 +22,11 @@ body{
 body{
     background-image: url(/assets/skull-bg.png);
     display: flex;
+    min-height: 100vh;
+    max-width: 100%;
     justify-content: center;
     align-items: center;
 }
-
-/*main container*/
-main{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    min-height: 100vh;
-    border: 3px solid red;
-    border-radius: 2px;
-    position: relative;
-}
-
 
 /*header*/
 header{
@@ -53,6 +41,46 @@ header{
     background-repeat: no-repeat;
     background-size: 850px;
     background-position: left;
+    position: relative;
+    z-index: 2;
+}
+
+.chopper-hiding {
+    width: 3rem;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    rotate: 270deg;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.chopper-animate {
+    animation: chopper 4s ease-in-out;
+}
+
+@keyframes chopper {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/*main container*/
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    min-height: 100vh;
+    border: 3px solid red;
+    border-radius: 2px;
+    position: relative;
 }
 
 .header-text{
@@ -1170,10 +1198,60 @@ input::placeholder{
     font-family: var(--roboto-font);
 }
 
-.sunny-main{
-    width: 4rem;
+.manga-middle{
+    border: 3px solid red;
+    background: var(--transparent-redbg2-color);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    gap: 40px;
+    border-radius: 2px;
+    overflow: hidden;
+    overflow-y: visible;
 }
 
+.manga-middle > h1{
+    color: white;
+    font-size: 3rem;
+}
+
+.manga{
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 10px;
+}
+
+.manga > h2{
+    color: white;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 9rem;
+    width: 14rem;
+    border: 3px solid red;
+    background: var(--transparent-redbg-color);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card:hover{
+    box-shadow: 0 0 8px 12px inset rgba(247, 154, 154, 0.144);
+}
+
+.card > img{
+    width: 10rem;
+}
 
 footer{
     border-top: 3px solid red;
@@ -1304,5 +1382,22 @@ main{
 }
 
 #msg-box::-webkit-scrollbar-track{
+    background-color: rgba(255, 255, 255, 0.179);
+}
+
+/* manga middle scrollbar*/
+.manga-middle::-webkit-scrollbar {
+    width: 6px;
+}
+
+.manga-middle::-webkit-scrollbar-thumb{
+    background-color: rgb(213, 213, 213);
+}
+
+.manga-middle::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(164, 164, 164) ;
+}
+
+.manga-middle::-webkit-scrollbar-track{
     background-color: rgba(255, 255, 255, 0.179);
 }
