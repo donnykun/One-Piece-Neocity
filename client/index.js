@@ -58,19 +58,30 @@ document.querySelector('.luffys-hat').addEventListener('click', function() {
   audio.play();
 });
 
-// const changeColorBtn = document.querySelector('.light-switch');
-// const lightModeElements = document.querySelectorAll('p, li, a, button, b, #song-btn, h2, small, span');
-// const body = document.body;
-// const songBtn = document.querySelector('#song-btn');
+//chatbox
+const nameInput = document.getElementById('chat-name');
+const messageInput = document.getElementById('chat-message');
+const chatBtn = document.getElementById('chat-btn');
+const messageBox = document.getElementById('msg-box');
 
-// changeColorBtn.addEventListener('click', () => {
-//     lightModeElements.forEach(element => {
-//         element.classList.toggle('blueText', false);
-//         element.classList.toggle('greenText', false);
-//         element.classList.toggle('tealColor');
-//     });
-//     body.classList.toggle('backgroundColor');
-// });
+chatBtn.addEventListener('click', () => {
+  const card = document.createElement('div');
+  const date = new Date();
+  const formattedDate = `${(date.getMonth() + 1).toString().padStart(2, '0')}.${date.getDate().toString().padStart(2, '0')}.${date.getFullYear()}`;
+  const formattedTime = date.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit'});
+  card.classList.add('chat-card');
+  card.innerHTML = `
+  <small>${formattedDate}, ${formattedTime}</small>
+  <h2>${nameInput.value}</h2>
+  <p>${messageInput.value}</p>
+  `;
+
+  messageBox.appendChild(card);
+  nameInput.value = "";
+  messageInput.value = "";
+})
+
+
 
 
 
