@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -239,7 +240,7 @@ main{
     font-weight: lighter;
 }
 
-.guide-header > img{
+.guide-header > a > img{
     width: 2.2rem;
     top: 45%;
     left: 10%;
@@ -1211,9 +1212,10 @@ input::placeholder{
     border-radius: 2px;
     overflow: hidden;
     overflow-y: visible;
+    padding: 10px;
 }
 
-.manga-middle > h1{
+.manga-middle h1{
     color: white;
     font-size: 3rem;
 }
@@ -1229,9 +1231,11 @@ input::placeholder{
 
 .manga > h2{
     color: white;
+    cursor: pointer;
+
 }
 
-.card{
+.manga-card{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1245,12 +1249,120 @@ input::placeholder{
     transition: .3s;
 }
 
-.card:hover{
+.manga-card:hover{
     box-shadow: 0 0 8px 12px inset rgba(247, 154, 154, 0.144);
 }
 
-.card > img{
+.manga-card > img{
     width: 10rem;
+}
+
+.figures-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 10px;
+}
+
+.figure-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 8px;
+}
+
+.figure-top{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid red;
+    background: var(--transparent-redbg-color);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    padding: 5px;
+}
+
+.figure-top > img{
+    width: 12rem;
+}
+
+.figure-bottom{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.figure-bottom > span{
+    cursor: pointer;
+}
+
+.figure-top:hover{
+    box-shadow: 0 0 8px 12px inset rgba(247, 154, 154, 0.144);
+}
+
+.games-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 10px;
+}
+
+.game-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 8px;
+}
+
+.game-top{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid red;
+    background: var(--transparent-redbg-color);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    padding: 20px;
+}
+
+.game-top > img{
+    width: 10rem;
+}
+
+.game-bottom{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-bottom > span{
+    cursor: pointer;
+}
+
+.game-top:hover{
+    box-shadow: 0 0 8px 12px inset rgba(247, 154, 154, 0.144);
 }
 
 footer{
@@ -1260,7 +1372,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(0, 0, 0);
+    color: rgb(173, 173, 173);
     font-family: var(--sharetech-font);
 }
 

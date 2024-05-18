@@ -12,7 +12,7 @@
     <link href="/assets/favicon.ico" rel="icon" type="image/x-icon">
     <script src="https://kit.fontawesome.com/c1b15e9f35.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js" defer></script>
+    <script src="/client/index.js" defer></script>
 </head>
 <body>
     <main>
@@ -46,15 +46,11 @@
                         </div>
                         <div class="updates-card">
                             <small class="update-date">05.14.24</small>
-                            <span>Created a Chatbox! Not fully functional at the moment, but you can send messages to yourself to see how it works!</span>
-                        </div>
-                        <div class="updates-card">
-                            <small class="update-date">05.14.24</small>
-                            <span>Created a stats section! It is currently static. Will plan on making it dynamic in the future!</span>
+                            <span>Created a Chatbox! Not fully functional at the moment, but you can send messages to yourself to see how it works! Aslo created a Stats section. It is currently static, will make it dynamic at a later time!</span>
                         </div>
                         <div class="updates-card">
                             <small class="update-date">05.17.24</small>
-                            <span>Added a section to show some One Piece Manga, Figures and Games!</span>
+                            <span>Added a section to showcase some One Piece Manga, Figures and Games!</span>
                         </div>
                     </div>
                 </div>
@@ -64,17 +60,17 @@
                 <div class="guide-container">
                     <div class="guide-header">
                         <h2>Guide</h2>
-                        <img src="/assets/the-sunny.png" loading="lazy" alt="Thousand Sunny Icon" title="The Thousand Sunny">
+                        <a target="_blank" href="/client/sunnyvibes.html"><img src="/assets/the-sunny.png" loading="lazy" alt="Thousand Sunny Icon" title="The Thousand Sunny"></a>
                     </div>
                     <div class="guide-bottom">
                         <div class="guide-links">
                             <a href="/client/index.html" title="Home"><img class="log-pose-img" src="/assets/logpose-transparent.png" title="log pose" loading="lazy" alt="log pose"> <span>Home</span></a>
                             <a href="" title="Story Arcs"><img class="log-pose-img" src="/assets/logpose-transparent.png" title="log pose" loading="lazy" alt="log pose"> <span>Story Arcs</span></a>
-                            <a href="/client/manga_figures_games.html" title="Manga"><img class="log-pose-img" src="/assets/logpose-transparent.png" title="log pose" loading="lazy" alt="log pose"> <span>Manga</span></a>
+                            <a href="/client/manga_figures_games.html#manga" title="Manga"><img class="log-pose-img" src="/assets/logpose-transparent.png" title="log pose" loading="lazy" alt="log pose"> <span>Manga</span></a>
                             <a href="" title="Characters"><img class="log-pose-img" src="/assets/logpose-transparent.png" title="log pose" loading="lazy" alt="log pose"> <span>Characters</span></a>
                             <a href="" title="Photos"><img class="log-pose-img" src="/assets/logpose-transparent.png" title="log pose" loading="lazy" alt="log pose"> <span>Photos</span></a>
-                            <a href="" title="Figures"><img class="log-pose-img" src="/assets/logpose-transparent.png" title="log pose" loading="lazy" alt="log pose"> <span>Figures</span></a>
-                            <a href="" title="Games"><img class="log-pose-img" src="/assets/logpose-transparent.png" title="log pose" loading="lazy" alt="log pose"> <span>Games</span></a>
+                            <a href="/client/manga_figures_games.html#figures" title="Figures"><img class="log-pose-img" src="/assets/logpose-transparent.png" title="log pose" loading="lazy" alt="log pose"> <span>Figures</span></a>
+                            <a href="/client/manga_figures_games.html#games" title="Games"><img class="log-pose-img" src="/assets/logpose-transparent.png" title="log pose" loading="lazy" alt="log pose"> <span>Games</span></a>
                         </div>
                     </div>
                 </div>
@@ -83,35 +79,103 @@
                         <h2>Stats</h2>
                     </div>
                         <div class="stats-bottom">
-                        <p>2 Online</p>
-                        <p>Hits: 10</p>
-                        <p>Last Updated: 05.14.24</p>
+                        <p>3 Online</p>
+                        <p>Hits: 22</p>
+                        <p>Last Updated: 05.17.24</p>
                     </div>
                 </div>
             </section>
             <section class="manga-middle">
                 <img class="middle-header-img" src="/assets/one-piece-logo.png" alt="One Piece" title="One Pice" loading="lazy">
-                <h1>Manga</h1>
+                <h1 id="manga">Manga</h1>
                 <div class="manga">
-                    <div class="card">
+                    <div class="manga-card">
                         <img src="/assets/eastbluemanga.png" alt="East Blue Manga Set" title="East Blue Manga Set" loading="lazy">
                     </div>
                     <h2>One Piece Box Set 1: East Blue and Baroque Works</h2>
-                    <div class="card">
+                    <div class="manga-card">
                         <img src="/assets/skypieamangaset.png" alt="Skypiea Manga Manga Set" title="Skypiea Manga Manga Set" loading="lazy">
                     </div>
                     <h2>One Piece Box Set 2: Skypiea and Water Seven</h2>
-                    <div class="card">
+                    <div class="manga-card">
                         <img src="/assets/thrillerbarkmanga.png" alt="Thriller Bark Manga Set" title="Thriller Bark Manga Set" loading="lazy">
                     </div>
                     <h2>One Piece Box Set 3: Thriller Bark to New World</h2>
-                    <div class="card">
+                    <div class="manga-card">
                         <img src="/assets/dressrosamanga.png" alt="Dressrosa Manga Set" title="Dressrosa Manga Set" loading="lazy"> 
                     </div>
                     <h2>One Piece Box Set 4: Dressrosa to Reverie</h2>
                 </div>
-
-
+                <h1 id="figures">Figures</h1>
+                <div class="figures-container">
+                    <div class="figure-card">
+                        <div class="figure-top">
+                            <img src="/assets/luffy-figure.webp" alt="Figure of Monkey D. Luffy" title="Monkey D. Luffy" loading="lazy">                        </div>
+                        <div class="figure-bottom">
+                            <span>Luffy Wano Country Figure</span>
+                        </div>
+                    </div>
+                    <div class="figure-card">
+                        <div class="figure-top">
+                            <img src="/assets/shanks-figure.webp" alt="Figure of Red Hair Shanks" title="Red Hair Shanks" loading="lazy">
+                        </div>
+                        <div class="figure-bottom">
+                            <span>Red Hair Shanks Figure</span>
+                        </div>
+                    </div>
+                    <div class="figure-card">
+                        <div class="figure-top">
+                            <img src="/assets/zoro-figure.webp" alt="Figure of Roronoa Zoro" title="Roronoa Zoro" loading="lazy">                        </div>
+                        <div class="figure-bottom">
+                            <span>Roronoa Zoro Figure</span>
+                        </div>
+                    </div>
+                    <div class="figure-card">
+                        <div class="figure-top">
+                            <img src="/assets/chopper-figure.png" alt="Figure of Tony Tony Chopper" title="Tony Tony Chopper" loading="lazy">                        </div>
+                        <div class="figure-bottom">
+                            <span>Tony Tony Chopper Figure</span>
+                        </div>
+                    </div>
+                    <div class="figure-card">
+                        <div class="figure-top">
+                            <img src="/assets/law-figure.webp" alt="Figure of Trafalgar D. Law" title="Trafalgar D. Law" loading="lazy">                        </div>
+                        <div class="figure-bottom">
+                            <span>Trafalgar D. Law Figure</span>
+                        </div>
+                    </div>
+                    <div class="figure-card">
+                        <div class="figure-top">
+                            <img src="/assets/devilfruit-figure.webp" alt="Figure of a Devil Fruit" title="Devil Fruit" loading="lazy">                        </div>
+                        <div class="figure-bottom">
+                            <span>Devil Fruit Figure</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 id="games">Games</h1>
+                <div class="games-container">
+                    <div class="game-card">
+                        <div class="game-top">
+                            <img src="/assets/piratewarrior3game.png" alt="Pirate Warrior 3 One Piece Game" title="One Piece: Pirate Warriors 3" loading="lazy">                        </div>
+                        <div class="game-bottom">
+                            <span>One Piece: Pirate Warriors 3</span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-top">
+                            <img src="/assets/worldseekergame.jpg" alt="One Piece: World Seeker Game" title="One Piece: World Seeker" loading="lazy">                        </div>
+                        <div class="game-bottom">
+                            <span>One Piece: World Seeker</span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-top">
+                            <img src="/assets/odysseygame.jpeg" alt="One Piece: Odyssey Game" title="One Piece: Odyssey" loading="lazy">                        </div>
+                        <div class="game-bottom">
+                            <span>One Piece: Odyssey</span>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="main-right">
@@ -173,6 +237,31 @@
         </section>
         <footer>best viewed on desktop <3 coded with love <3 Donny 2024 </footer>
     </main>
+    
+    <script>
+        //chatbox
+        const nameInput = document.getElementById('chat-name');
+        const messageInput = document.getElementById('chat-message');
+        const chatBtn = document.getElementById('chat-btn');
+        const messageBox = document.getElementById('msg-box');
+
+        chatBtn.addEventListener('click', () => {
+        const card = document.createElement('div');
+        const date = new Date();
+        const formattedDate = `${(date.getMonth() + 1).toString().padStart(2, '0')}.${date.getDate().toString().padStart(2, '0')}.${date.getFullYear()}`;
+        const formattedTime = date.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit'});
+        card.classList.add('chat-card');
+        card.innerHTML = `
+        <small>${formattedDate}, ${formattedTime}</small>
+        <h2>${nameInput.value}</h2>
+        <p>${messageInput.value}</p>
+        `;
+
+        messageBox.appendChild(card);
+        nameInput.value = "";
+        messageInput.value = "";
+        })
+    </script>
 
     <script>
         if ('serviceWorker' in navigator) {
