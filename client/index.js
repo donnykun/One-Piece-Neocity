@@ -66,14 +66,19 @@ document.querySelector('.chopper-hiding').addEventListener('click', function() {
 
 
 
-//luffy flying hat
-document.querySelector('.luffys-hat').addEventListener('click', function() {
-  this.style.animation = 'fly-away 20s forwards';
+// luffy flying hat
+window.addEventListener('DOMContentLoaded', () => {
+  const luffyHat = document.querySelector('.luffys-hat')
+  luffyHat.addEventListener('click', () => {
+    luffyHat.style.animation = 'fly-away 20s forwards';
+    console.log(luffyHat)
+  
+    let audio = new Audio('/assets/luffy-eyecatcher.mp3');
+    audio.volume = 0.07;
+    audio.play();
+  });
+})
 
-  let audio = new Audio('/assets/luffy-eyecatcher.mp3');
-  audio.volume = 0.07;
-  audio.play();
-});
 
 //chatbox
 const nameInput = document.getElementById('chat-name');
@@ -96,7 +101,14 @@ chatBtn.addEventListener('click', () => {
   messageBox.appendChild(card);
   nameInput.value = "";
   messageInput.value = "";
+  
 })
+// if(nameInput.value === "" && messageInput.value === "") {
+//   alert('empty');
+//   event.preventDefault();
+//   card.remove('chat-card');
+  
+// }
 
 
 
