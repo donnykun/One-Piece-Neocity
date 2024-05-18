@@ -237,31 +237,6 @@
         </section>
         <footer>best viewed on desktop <3 coded with love <3 Donny 2024 </footer>
     </main>
-    
-    <script>
-        //chatbox
-        const nameInput = document.getElementById('chat-name');
-        const messageInput = document.getElementById('chat-message');
-        const chatBtn = document.getElementById('chat-btn');
-        const messageBox = document.getElementById('msg-box');
-
-        chatBtn.addEventListener('click', () => {
-        const card = document.createElement('div');
-        const date = new Date();
-        const formattedDate = `${(date.getMonth() + 1).toString().padStart(2, '0')}.${date.getDate().toString().padStart(2, '0')}.${date.getFullYear()}`;
-        const formattedTime = date.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit'});
-        card.classList.add('chat-card');
-        card.innerHTML = `
-        <small>${formattedDate}, ${formattedTime}</small>
-        <h2>${nameInput.value}</h2>
-        <p>${messageInput.value}</p>
-        `;
-
-        messageBox.appendChild(card);
-        nameInput.value = "";
-        messageInput.value = "";
-        })
-    </script>
 
     <script>
         if ('serviceWorker' in navigator) {

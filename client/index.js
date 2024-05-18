@@ -6,8 +6,9 @@ const songPaths = [
   '/assets/opening-18.mp3',
   '/assets/op-20.mp3',
   '/assets/op-22.mp3',
+  '/assets/sekai-no-owari.mp3',
   '/assets/op-26.mp3',
-  '/assets/ost-overtaken.mp3',
+  '/assets/sekai-no-owari.mp3',
 ];
 
 const songButtons = document.querySelectorAll('#song-btn');
