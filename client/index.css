@@ -1478,17 +1478,29 @@ input::placeholder{
 .story-page-content {
     display: flex;
     width: 100%;
+    gap: 10rem;
     padding: 10px;
     padding-left: 3rem;
     flex-direction: column;
     overflow: hidden;
     overflow-y: visible;
+    font-size: 1.3rem;
+}
+
+.story-page-content h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid rgb(255, 0, 0);
+    width: 96%;
+    font-weight: lighter;
+}
+
+.story-page-content p {
+    font-size: 1.2rem;
 }
 
 #overview {
     display: flex;
     width: 100%;
-    font-size: 1.3rem;
     flex-direction: column;
     position: relative
 }
@@ -1501,19 +1513,20 @@ input::placeholder{
 }
 
 #overview p {
-    width: 45%;
+    width: 52%;
     text-align: left;
+    font-size: 1.4rem;
 }
 
 .content-links {
     color: cornflowerblue;
-    transition: .15s;
+    transition: .2s;
 }
 
 .content-links:hover {
     color: rgb(100, 216, 237);
     text-decoration: underline;
-    transition: .15s;
+    transition: .2s;
 }
 
 #overview img {
@@ -1528,6 +1541,10 @@ input::placeholder{
 #overview img:hover {
     scale: 1.02;
     transition: .3s ease-in-out;
+}
+
+#main-story-arcs {
+
 }
 
 footer{
