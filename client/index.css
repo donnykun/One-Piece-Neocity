@@ -11,6 +11,7 @@
     --sharetech-font: 'sharetech';
     --transparent-redbg-color: rgba(247, 154, 154, 0.26);
     --transparent-redbg2-color: rgba(247, 154, 154, 0.062);
+    --hyperlink-color: cornflowerblue;
 }
 
 html,
@@ -1377,7 +1378,6 @@ input::placeholder{
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    padding-top: 0;
     gap: 10px;
     width: 35%;
     height: 100%;
@@ -1479,8 +1479,10 @@ input::placeholder{
     display: flex;
     width: 100%;
     padding: 10px;
-    padding-left: 4rem;
+    padding-left: 3rem;
     flex-direction: column;
+    overflow: hidden;
+    overflow-y: visible;
 }
 
 #overview {
@@ -1491,22 +1493,41 @@ input::placeholder{
     position: relative
 }
 
+#overview > h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid rgb(255, 0, 0);
+    width: 45%;
+    font-weight: lighter;
+}
+
 #overview p {
-    width: 50%;
+    width: 45%;
     text-align: left;
 }
 
-#overview > h1 {
-    font-size: 3rem;
-    border-bottom: 3px solid rgba(255, 0, 0, 0.26);
-    width: 50%;
+.content-links {
+    color: cornflowerblue;
+    transition: .15s;
 }
 
-#overview > div > a > img {
+.content-links:hover {
+    color: rgb(100, 216, 237);
+    text-decoration: underline;
+    transition: .15s;
+}
+
+#overview img {
     width: 22rem;
     position: absolute;
     right: 0;
     top: 0;
+    transition: .3s ease-in-out;
+}
+
+
+#overview img:hover {
+    scale: 1.02;
+    transition: .3s ease-in-out;
 }
 
 footer{
