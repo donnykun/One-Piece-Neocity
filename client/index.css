@@ -1478,35 +1478,33 @@ input::placeholder{
 .story-page-content {
     display: flex;
     width: 100%;
-    gap: 10rem;
+    gap: 8rem;
     padding: 10px;
     padding-left: 3rem;
     flex-direction: column;
     overflow: hidden;
     overflow-y: visible;
-    font-size: 1.3rem;
+    font-family: var(--roboto-font);
+}
+
+.story-page-content p {
+    font-size: 1.1rem;
 }
 
 .story-page-content h1 {
     font-size: 2.5rem;
     border-bottom: 3px solid rgb(255, 0, 0);
-    width: 96%;
     font-weight: lighter;
-}
-
-.story-page-content p {
-    font-size: 1.2rem;
 }
 
 #overview {
     display: flex;
     width: 100%;
     flex-direction: column;
-    position: relative
+    position: relative;
 }
 
 #overview > h1 {
-    font-size: 2.5rem;
     border-bottom: 3px solid rgb(255, 0, 0);
     width: 45%;
     font-weight: lighter;
@@ -1515,12 +1513,13 @@ input::placeholder{
 #overview p {
     width: 52%;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .content-links {
     color: cornflowerblue;
     transition: .2s;
+    width: fit-content;
 }
 
 .content-links:hover {
@@ -1537,17 +1536,73 @@ input::placeholder{
     transition: .3s ease-in-out;
 }
 
-
 #overview img:hover {
     scale: 1.02;
     transition: .3s ease-in-out;
 }
 
 #main-story-arcs {
-
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }
 
-footer{
+#east-blue-saga {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.saga-info {
+    margin-inline: auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: left;
+    width: 60%;
+}
+
+.saga-info th, .saga-info td {
+    padding: 8px 10px;
+    border: 3px solid white;
+}
+
+.saga-info thead tr {
+    background-color: cornflowerblue;
+    color: #ffffff;
+    text-align: left;
+}
+
+.saga-info tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.saga-info tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.saga-info tbody tr:last-of-type {
+    border-bottom: 2px solid #001aff;
+}
+
+.arc-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.arc-containers h4 {
+    font-size: 18px;
+}
+
+.arc-containers ul {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+}
+
+
+
+footer {
     border-top: 3px solid red;
     background: var(--transparent-redbg-color);
     width: 100%;
