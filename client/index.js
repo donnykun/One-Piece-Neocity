@@ -19,7 +19,6 @@ songButtons.forEach((button, index) => {
     audioElement.src = songPaths[index];
     audioElement.play();
   });
-});
 
 const audio = document.getElementById('audio');
 
@@ -27,12 +26,16 @@ audio.addEventListener('loadeddata', () => {
   audio.volume = 0.06; 
 
   localStorage.setItem("Volume", audio.volume);
+  });
 });
+
+
 
 // brook gif toggle
   function playGif() {
     let gif = document.getElementById('brook-gif');
     let src = gif.getAttribute('data-src');
+
     gif.setAttribute('src', src);
     audioElement.src = '/assets/binks-sake.mp3';
     audioElement.play();
@@ -53,12 +56,14 @@ buttons.forEach(button => {
 //chopper hiding
 document.querySelector('.chopper-hiding').addEventListener('click', function() {
   let chopper = this;
+
   chopper.classList.add('chopper-animate'); // Add class to trigger animation
+
   let audio = new Audio('/assets/voice-chopper.mp3')
+
   audio.volume = 0.5;
   audio.play()
 
-  // Listen for animation end to remove the class and allow re-triggering
   chopper.addEventListener('animationend', function() {
       chopper.classList.remove('chopper-animate');
   }, { once: true });
@@ -99,16 +104,13 @@ chatBtn.addEventListener('click', () => {
   `;
 
   messageBox.appendChild(card);
-  nameInput.value = "";
-  messageInput.value = "";
+  nameInput.value = '';
+  messageInput.value = '';
   
 })
-// if(nameInput.value === "" && messageInput.value === "") {
-//   alert('empty');
-//   event.preventDefault();
-//   card.remove('chat-card');
-  
-// }
+
+
+
 
 
 
