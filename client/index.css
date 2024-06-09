@@ -1568,15 +1568,17 @@ input::placeholder{
 
 /* table styling */
 .east-blue-table thead tr {
-    background-color: cornflowerblue;
+    background-color: rgb(4, 149, 160);
     color: #ffffff;
     text-align: left;
 }
 
 .arabasta-table thead tr {
-    background-color: rgb(202, 217, 0);
-    color: black;
-    text-align: left;
+    background-color: rgb(209, 153, 0);
+}
+
+.skyisland-table thead tr {
+    background-color: rgb(37, 117, 16);
 }
 
 .arc-containers {
