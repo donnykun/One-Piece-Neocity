@@ -1546,7 +1546,7 @@ input::placeholder{
     gap: 4rem;
 }
 
-#east-blue-saga {
+.saga-containers {
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -1566,14 +1566,17 @@ input::placeholder{
     border: 2px solid white;
 }
 
-.saga-info thead tr {
+/* table styling */
+.east-blue-table thead tr {
     background-color: cornflowerblue;
     color: #ffffff;
     text-align: left;
 }
 
-.saga-info tbody tr {
-    border-bottom: 1px solid #dddddd;
+.arabasta-table thead tr {
+    background-color: rgb(202, 217, 0);
+    color: black;
+    text-align: left;
 }
 
 .arc-containers {
@@ -1590,7 +1593,6 @@ input::placeholder{
     padding: 1rem 3rem;
     font-size: 1.1rem;
 }
-
 
 
 footer {
