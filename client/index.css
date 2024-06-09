@@ -1488,6 +1488,8 @@ input::placeholder{
     padding: 10px;
     padding-left: 1rem;
     flex-direction: column;
+    border: 3px solid red;
+    border-radius: 2px;
     font-family: var(--roboto-font);
     background: var(--transparent-redbg2-color);
 }
@@ -1525,6 +1527,19 @@ input::placeholder{
     color: cornflowerblue;
     transition: .2s;
     width: fit-content;
+}
+
+.saga-containers .content-links h2 {
+    text-decoration: underline;
+    color: red;
+    transition: .2s;
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
+.saga-containers .content-links h2:hover{
+    color: rgb(100, 216, 237);
+    transition: .2s;
 }
 
 .content-links:hover {
@@ -1629,7 +1644,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(173, 173, 173);
+    color: rgb(201, 200, 200);
     font-family: var(--sharetech-font);
 }
 
