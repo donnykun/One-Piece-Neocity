@@ -1630,6 +1630,10 @@ input::placeholder{
     background-color: rgb(230, 0, 0);
 }
 
+.egghead-table thead tr {
+    background-color: rgb(199, 126, 17);
+}
+
 .arc-containers {
     display: flex;
     flex-direction: column;
