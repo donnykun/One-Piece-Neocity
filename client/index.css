@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-padding: 1rem;
 }
 
 :root{
@@ -1366,6 +1367,10 @@ input::placeholder{
 
 /*story arc page*/
 .story-page {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
     width: 100%;
     min-height: 100vh;
     font-family: var(--sharetech-font);
@@ -1481,9 +1486,10 @@ input::placeholder{
     width: 100%;
     gap: 8rem;
     padding: 10px;
-    padding-left: 3rem;
+    padding-left: 1rem;
     flex-direction: column;
     font-family: var(--roboto-font);
+    background: var(--transparent-redbg2-color);
 }
 
 .story-page-content p {
@@ -1556,13 +1562,13 @@ input::placeholder{
 .saga-info {
     margin-inline: auto;
     border-collapse: collapse;
-    font-size: 18px;
+    font-size: 14px;
     text-align: left;
     width: 60%;
 }
 
 .saga-info th, .saga-info td {
-    padding: 8px 10px;
+    padding: 5px;
     border: 2px solid white;
 }
 
@@ -1581,6 +1587,20 @@ input::placeholder{
     background-color: rgb(37, 117, 16);
 }
 
+.water7-table thead tr {
+    background-color: rgb(8, 26, 126);
+}
+
+.thriller-bark-table thead tr {
+    background-color: rgb(116, 5, 131);
+}
+
+.summit-war-table thead tr {
+    background-color: rgb(158, 158, 158);
+}
+
+
+
 .arc-containers {
     display: flex;
     flex-direction: column;
@@ -1594,6 +1614,10 @@ input::placeholder{
 .arc-containers ul {
     padding: 1rem 3rem;
     font-size: 1.1rem;
+}
+
+.arc-containers ul li {
+    margin: 5px;
 }
 
 
